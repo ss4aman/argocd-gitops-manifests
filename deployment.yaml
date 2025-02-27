@@ -1,0 +1,20 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-clouddeploy-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argocd-clouddeploy-app
+  template:
+    metadata:
+      labels:
+        app: argocd-clouddeploy-app
+    spec:
+      containers:
+      - name: argocd-clouddeploy-app
+        image: REPLACE_WITH_YOUR_IMAGE_URL # e.g., gcr.io/your-project/argocd-clouddeploy-app:latest
+        ports:
+        - containerPort: 3000
