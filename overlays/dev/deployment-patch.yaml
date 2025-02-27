@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-clouddeploy-app
+spec:
+  replicas: 2 # Override the replica count for dev environment.
