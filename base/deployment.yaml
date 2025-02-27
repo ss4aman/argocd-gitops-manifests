@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: argocd-clouddeploy-app
-        image: us-central1-docker.pkg.dev/worstation-379213/argocd-clouddeploy-repo:$SHORT_SHA # e.g., gcr.io/your-project/argocd-clouddeploy-app:latest
+        image: us-central1-docker.pkg.dev/worstation-379213/argocd-clouddeploy-repo/argocd-clouddeploy-app:$SHORT_SHA # e.g., gcr.io/your-project/argocd-clouddeploy-app:latest
         ports:
         - containerPort: 3000
